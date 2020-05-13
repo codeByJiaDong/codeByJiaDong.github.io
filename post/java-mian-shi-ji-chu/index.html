@@ -1,0 +1,201 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Java 面试基础 | Gridea</title>
+<link rel="shortcut icon" href="http://codeByJiaDong.github.io/favicon.ico?v=1589378206486">
+<link href="https://cdn.jsdelivr.net/npm/remixicon@2.3.0/fonts/remixicon.css" rel="stylesheet">
+<link rel="stylesheet" href="http://codeByJiaDong.github.io/styles/main.css">
+<link rel="alternate" type="application/atom+xml" title="Java 面试基础 | Gridea - Atom Feed" href="http://codeByJiaDong.github.io/atom.xml">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Droid+Serif:400,700">
+
+
+
+    <meta name="description" content="
+1.面向对象 和 面向过程的区别
+这个问题 很好答，但是 如果回答深刻却不简单
+
+面向过程 从写代码的角度讲，面向过程 更像是 一件事 从上往下执行，机器一行编译执行 。性能会比面向对象高，因为少了类的的实例开销，但是这样并不是没有坏处的..." />
+    <meta name="keywords" content="" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.10.0/katex.min.css">
+    <script src="https://cdn.bootcss.com/highlight.js/9.12.0/highlight.min.js"></script>
+  </head>
+  <body>
+    <div class="main">
+      <div class="main-content">
+        <div class="site-header">
+  <a href="http://codeByJiaDong.github.io">
+  <img class="avatar" src="http://codeByJiaDong.github.io/images/avatar.png?v=1589378206486" alt="">
+  </a>
+  <h1 class="site-title">
+    Gridea
+  </h1>
+  <p class="site-description">
+    温故而知新
+  </p>
+  <div class="menu-container">
+    
+      
+        <a href="/" class="menu">
+          首页
+        </a>
+      
+    
+      
+        <a href="/archives" class="menu">
+          归档
+        </a>
+      
+    
+      
+        <a href="/tags" class="menu">
+          标签
+        </a>
+      
+    
+      
+        <a href="/post/about" class="menu">
+          关于
+        </a>
+      
+    
+  </div>
+  <div class="social-container">
+    
+      
+    
+      
+    
+      
+    
+      
+    
+      
+    
+  </div>
+</div>
+
+        <div class="post-detail">
+          <article class="post">
+            <h2 class="post-title">
+              Java 面试基础
+            </h2>
+            <div class="post-info">
+              <span>
+                2020-05-13
+              </span>
+              <span>
+                3 min read
+              </span>
+              
+            </div>
+            
+            <div class="post-content-wrapper">
+              <div class="post-content">
+                <!-- 这是一篇专门 对java 基础问题 的 一些 总结 -->
+<h2 id="1面向对象-和-面向过程的区别">1.面向对象 和 面向过程的区别</h2>
+<p><strong>这个问题 很好答，但是 如果回答深刻却不简单</strong></p>
+<ul>
+<li>面向过程 从写代码的角度讲，面向过程 更像是 一件事 从上往下执行，机器一行编译执行 。性能会比面向对象高，因为少了类的的实例开销，但是这样并不是没有坏处的，最实在的区别就是，面向过程没有面向对象易于维护，易扩展。（我们在实际开发中，经常遇到对需求的迭代，这个时候面向对象好处大的多），当然，如果我们编程主要考虑更多是性能的时候，比如单片机，嵌入式开发，linux等，这个时候面向过程更加好。</li>
+<li>面向对象 前面说了 易于维护 易于扩展 易于复用。因为面向对象 主要有  三大特点 封装 继承 多态，编程开发者可以 像组件一般 组装起 一台 低耦合 易更换 的系统，这样系统更加灵活，更易于维护。但是，面向对象性能相对比面向过程低。</li>
+</ul>
+<blockquote>
+<p>但是凡事不是绝对的，面向过程也需要分配内存，计算内存偏移量，，Java 性能差的主要原因并不是因为它是面向对象语言，而是 Java 是半编译语言，最终的执行代码并不是可以直接被 CPU 执行的二进制机械码。<br>
+而面向过程语言大多都是直接编译成机械码在电脑上执行，并且其它一些面向过程的脚本语言性能也并不一定比 Java 好。</p>
+</blockquote>
+<h2 id="2-关于-jvm-jdk-和-jre">2. 关于 JVM JDK 和 JRE</h2>
+<h3 id="jvm">JVM</h3>
+<p>Java 虚拟机（JVM）是运行JAVA字节码就是CLass文件的虚拟机。JVM有针对不同的系统的特定实现（Windows，Linux，macOS），目的是使用相同的字节码，它们都会给出相同的结果。</p>
+<h3 id="什么是字节码采用字节码的好处是什么">什么是字节码？采用字节码的好处是什么？</h3>
+<blockquote>
+<p>在java 中，JVM可以理解的代码就叫做字节码（即扩展名带.class的文件），它不会在任何系统下直接能够执行，需要借助JVM。JAVA语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植（随处可运行）的特点。所以Java程序运行比较高效，对系统兼容性好，无须重新编译即可在不同环境下运行。</p>
+</blockquote>
+<p>Java程序从源代码到运行一般有下面3步<br>
+<img src="http://codeByJiaDong.github.io/post-images/1589377379384.png" alt="" loading="lazy"></p>
+
+              </div>
+              <div class="toc-container">
+                <ul class="markdownIt-TOC">
+<li>
+<ul>
+<li><a href="#1%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1-%E5%92%8C-%E9%9D%A2%E5%90%91%E8%BF%87%E7%A8%8B%E7%9A%84%E5%8C%BA%E5%88%AB">1.面向对象 和 面向过程的区别</a></li>
+<li><a href="#2-%E5%85%B3%E4%BA%8E-jvm-jdk-%E5%92%8C-jre">2. 关于 JVM JDK 和 JRE</a>
+<ul>
+<li><a href="#jvm">JVM</a></li>
+<li><a href="#%E4%BB%80%E4%B9%88%E6%98%AF%E5%AD%97%E8%8A%82%E7%A0%81%E9%87%87%E7%94%A8%E5%AD%97%E8%8A%82%E7%A0%81%E7%9A%84%E5%A5%BD%E5%A4%84%E6%98%AF%E4%BB%80%E4%B9%88">什么是字节码？采用字节码的好处是什么？</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+              </div>
+            </div>
+          </article>
+        </div>
+
+        
+          <div class="next-post">
+            <div class="next">下一篇</div>
+            <a href="http://codeByJiaDong.github.io/post/hello-gridea/">
+              <h3 class="post-title">
+                Hello Gridea
+              </h3>
+            </a>
+          </div>
+        
+
+        
+
+        <div class="site-footer">
+  Powered by <a href="https://github.com/getgridea/gridea" target="_blank">Gridea</a>
+  <a class="rss" href="http://codeByJiaDong.github.io/atom.xml" target="_blank">
+    <i class="ri-rss-line"></i> RSS
+  </a>
+</div>
+
+      </div>
+    </div>
+
+    <script>
+      hljs.initHighlightingOnLoad()
+
+      let mainNavLinks = document.querySelectorAll(".markdownIt-TOC a");
+
+      // This should probably be throttled.
+      // Especially because it triggers during smooth scrolling.
+      // https://lodash.com/docs/4.17.10#throttle
+      // You could do like...
+      // window.addEventListener("scroll", () => {
+      //    _.throttle(doThatStuff, 100);
+      // });
+      // Only not doing it here to keep this Pen dependency-free.
+
+      window.addEventListener("scroll", event => {
+        let fromTop = window.scrollY;
+
+        mainNavLinks.forEach((link, index) => {
+          let section = document.getElementById(decodeURI(link.hash).substring(1));
+          let nextSection = null
+          if (mainNavLinks[index + 1]) {
+            nextSection = document.getElementById(decodeURI(mainNavLinks[index + 1].hash).substring(1));
+          }
+          if (section.offsetTop <= fromTop) {
+            if (nextSection) {
+              if (nextSection.offsetTop > fromTop) {
+                link.classList.add("current");
+              } else {
+                link.classList.remove("current");    
+              }
+            } else {
+              link.classList.add("current");
+            }
+          } else {
+            link.classList.remove("current");
+          }
+        });
+      });
+
+    </script>
+  </body>
+</html>

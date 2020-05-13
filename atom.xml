@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>http://codeByJiaDong.github.io</id>
+    <title>Gridea</title>
+    <updated>2020-05-13T13:57:50.167Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="http://codeByJiaDong.github.io"/>
+    <link rel="self" href="http://codeByJiaDong.github.io/atom.xml"/>
+    <subtitle>温故而知新</subtitle>
+    <logo>http://codeByJiaDong.github.io/images/avatar.png</logo>
+    <icon>http://codeByJiaDong.github.io/favicon.ico</icon>
+    <rights>All rights reserved 2020, Gridea</rights>
+    <entry>
+        <title type="html"><![CDATA[Java 面试基础]]></title>
+        <id>http://codeByJiaDong.github.io/post/java-mian-shi-ji-chu/</id>
+        <link href="http://codeByJiaDong.github.io/post/java-mian-shi-ji-chu/">
+        </link>
+        <updated>2020-05-13T13:05:31.000Z</updated>
+        <content type="html"><![CDATA[<!-- 这是一篇专门 对java 基础问题 的 一些 总结 -->
+<h2 id="1面向对象-和-面向过程的区别">1.面向对象 和 面向过程的区别</h2>
+<p><strong>这个问题 很好答，但是 如果回答深刻却不简单</strong></p>
+<ul>
+<li>面向过程 从写代码的角度讲，面向过程 更像是 一件事 从上往下执行，机器一行编译执行 。性能会比面向对象高，因为少了类的的实例开销，但是这样并不是没有坏处的，最实在的区别就是，面向过程没有面向对象易于维护，易扩展。（我们在实际开发中，经常遇到对需求的迭代，这个时候面向对象好处大的多），当然，如果我们编程主要考虑更多是性能的时候，比如单片机，嵌入式开发，linux等，这个时候面向过程更加好。</li>
+<li>面向对象 前面说了 易于维护 易于扩展 易于复用。因为面向对象 主要有  三大特点 封装 继承 多态，编程开发者可以 像组件一般 组装起 一台 低耦合 易更换 的系统，这样系统更加灵活，更易于维护。但是，面向对象性能相对比面向过程低。</li>
+</ul>
+<blockquote>
+<p>但是凡事不是绝对的，面向过程也需要分配内存，计算内存偏移量，，Java 性能差的主要原因并不是因为它是面向对象语言，而是 Java 是半编译语言，最终的执行代码并不是可以直接被 CPU 执行的二进制机械码。<br>
+而面向过程语言大多都是直接编译成机械码在电脑上执行，并且其它一些面向过程的脚本语言性能也并不一定比 Java 好。</p>
+</blockquote>
+<h2 id="2-关于-jvm-jdk-和-jre">2. 关于 JVM JDK 和 JRE</h2>
+<h3 id="jvm">JVM</h3>
+<p>Java 虚拟机（JVM）是运行JAVA字节码就是CLass文件的虚拟机。JVM有针对不同的系统的特定实现（Windows，Linux，macOS），目的是使用相同的字节码，它们都会给出相同的结果。</p>
+<h3 id="什么是字节码采用字节码的好处是什么">什么是字节码？采用字节码的好处是什么？</h3>
+<blockquote>
+<p>在java 中，JVM可以理解的代码就叫做字节码（即扩展名带.class的文件），它不会在任何系统下直接能够执行，需要借助JVM。JAVA语言通过字节码的方式，在一定程度上解决了传统解释型语言执行效率低的问题，同时又保留了解释型语言可移植（随处可运行）的特点。所以Java程序运行比较高效，对系统兼容性好，无须重新编译即可在不同环境下运行。</p>
+</blockquote>
+<p>Java程序从源代码到运行一般有下面3步<br>
+<img src="http://codeByJiaDong.github.io/post-images/1589377379384.png" alt="" loading="lazy"></p>
+]]></content>
+    </entry>
+    <entry>
+        <title type="html"><![CDATA[Hello Gridea]]></title>
+        <id>http://codeByJiaDong.github.io/post/hello-gridea/</id>
+        <link href="http://codeByJiaDong.github.io/post/hello-gridea/">
+        </link>
+        <updated>2018-12-11T16:00:00.000Z</updated>
+        <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+]]></summary>
+        <content type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
+✍️  <strong>Gridea</strong> 一个静态博客写作客户端。你可以用它来记录你的生活、心情、知识、笔记、创意... ...</p>
+<!-- more -->
+<p><a href="https://github.com/getgridea/gridea">Github</a><br>
+<a href="https://gridea.dev/">Gridea 主页</a><br>
+<a href="http://fehey.com/">示例网站</a></p>
+<h2 id="特性">特性👇</h2>
+<p>📝  你可以使用最酷的 <strong>Markdown</strong> 语法，进行快速创作</p>
+<p>🌉  你可以给文章配上精美的封面图和在文章任意位置插入图片</p>
+<p>🏷️  你可以对文章进行标签分组</p>
+<p>📋  你可以自定义菜单，甚至可以创建外部链接菜单</p>
+<p>💻  你可以在 <strong>Windows</strong>，<strong>MacOS</strong> 或 <strong>Linux</strong> 设备上使用此客户端</p>
+<p>🌎  你可以使用 <strong>𝖦𝗂𝗍𝗁𝗎𝖻 𝖯𝖺𝗀𝖾𝗌</strong> 或 <strong>Coding Pages</strong> 向世界展示，未来将支持更多平台</p>
+<p>💬  你可以进行简单的配置，接入 <a href="https://github.com/gitalk/gitalk">Gitalk</a> 或 <a href="https://github.com/SukkaW/DisqusJS">DisqusJS</a> 评论系统</p>
+<p>🇬🇧  你可以使用<strong>中文简体</strong>或<strong>英语</strong></p>
+<p>🌁  你可以任意使用应用内默认主题或任意第三方主题，强大的主题自定义能力</p>
+<p>🖥  你可以自定义源文件夹，利用 OneDrive、百度网盘、iCloud、Dropbox 等进行多设备同步</p>
+<p>🌱 当然 <strong>Gridea</strong> 还很年轻，有很多不足，但请相信，它会不停向前 🏃</p>
+<p>未来，它一定会成为你离不开的伙伴</p>
+<p>尽情发挥你的才华吧！</p>
+<p>😘 Enjoy~</p>
+]]></content>
+    </entry>
+</feed>
